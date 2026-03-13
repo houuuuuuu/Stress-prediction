@@ -1,0 +1,45 @@
+# ===== 데이터 =====
+data/*.csv
+data/*.xlsx
+
+# ===== 모델 =====
+models/*.pkl
+models/*.joblib
+models/*.cbm
+
+# ===== 제출 파일 =====
+outputs/*.csv
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ===== 가상환경 =====
+venv/
+env/
+.env/
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ===== IDE =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== 기타 =====
+*.log
+wandb/
+mlruns/
