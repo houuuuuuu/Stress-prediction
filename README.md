@@ -119,6 +119,19 @@ git push origin feature/내작업이름
 | LightGBM | - | lr=0.03, leaves=20 |
 | **Stacking+Blend** | - | 최종 제출 |
 
+🎉 Optimization Results
+Best MAE (CV) : 0.138088
+C             : 21.246601
+gamma         : 0.976670
+epsilon       : 0.000010
+
+Strategy           | OOF MAE Score  
+----------------------------------------
+Full (Single)      | 0.138090
+K-Fold             | 0.138090
+Multi-Seed         | 0.139143
+Blend              | 0.138483
+
 > PR 시 위 표를 업데이트해 주세요!
 
 ---
