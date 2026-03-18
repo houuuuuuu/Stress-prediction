@@ -116,10 +116,7 @@ git push origin feature/내작업이름
 | 모델 | CV MAE | 비고 |
 |------|--------|------|
 | **SVR (RBF)** | **0.13808** | C=35.77, gamma=0.98, eps=0 (V5 ULTRA) |
-| XGBoost | - | lr=0.03, depth=4 |
-| CatBoost | - | lr=0.03, depth=5 |
-| LightGBM | - | lr=0.03, leaves=20 |
-| Stacking+Blend | - | 최종 제출 |
+
 
 🎉 Optimization Results Best MAE (CV) : **0.138078** C : 35.7726 gamma : 0.9808 epsilon : 0.000000
 
