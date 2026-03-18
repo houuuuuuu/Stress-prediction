@@ -111,28 +111,37 @@ git push origin feature/내작업이름
 
 ## 📊 현재 성능
 
+|## 🏋 현재 성능
+
 | 모델 | CV MAE | 비고 |
 |------|--------|------|
-| SVR (RBF) | - | C=10, epsilon=0.01 |
+| **SVR (RBF)** | **0.13808** | C=35.77, gamma=0.98, eps=0 (V5 ULTRA) |
 | XGBoost | - | lr=0.03, depth=4 |
 | CatBoost | - | lr=0.03, depth=5 |
 | LightGBM | - | lr=0.03, leaves=20 |
-| **Stacking+Blend** | - | 최종 제출 |
+| Stacking+Blend | - | 최종 제출 |
 
-🎉 Optimization Results
-Best MAE (CV) : 0.138088
-C             : 21.246601
-gamma         : 0.976670
-epsilon       : 0.000010
+🎉 Optimization Results Best MAE (CV) : **0.138078** C : 35.7726 gamma : 0.9808 epsilon : 0.000000
 
-Strategy           | OOF MAE Score  
-----------------------------------------
-Full (Single)      | 0.138090
-K-Fold             | 0.138090
-Multi-Seed         | 0.139143
-Blend              | 0.138483
+### Strategy | OOF MAE Score
+
+| Strategy | OOF MAE | 비고 |
+|----------|---------|------|
+| Full (Single) | 0.13809 | train MAE=0.0 (오버핏 주의) |
+| K-Fold (10-Fold) | 0.13809 | Fold별 0.126~0.146 |
+| Multi-Seed (10×10) | 0.13914 | 100개 모델 평균 |
+| Blend (0.2/0.3/0.5) | 0.13848 | Full+KFold+MultiSeed |
+| **eps=0 (Single)** | **0.13808** | C=35.77, gamma=0.98 |
+| eps=0 Multi-Seed | - | 10×10 평균 |
 
 > PR 시 위 표를 업데이트해 주세요!
+
+### V5 상세 결과
+
+- **eps 탐색 버전**: CV MAE=0.13809 | C=21.2466, gamma=0.9767, epsilon=0.000010
+- **eps=0 고정 버전**: CV MAE=0.13808 | C=35.7726, gamma=0.9808
+- 피처 수: 29개 (One-Hot + BMI/혈압 파생 + 교호작용)
+- 제출 파일 6개 생성 (blend/multiseed/kfold/full/eps0/eps0_multiseed)
 
 ---
 
