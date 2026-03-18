@@ -113,7 +113,7 @@ git push origin feature/내작업이름
 
 | 모델 | CV MAE | 비고 |
 |------|--------|------|
-| SVR (RBF) | - | C=10, epsilon=0.01 |
+| SVR (RBF) | Null | C=21.246601, epsilon=0.00001 |
 | XGBoost | - | lr=0.03, depth=4 |
 | CatBoost | - | lr=0.03, depth=5 |
 | LightGBM | - | lr=0.03, leaves=20 |
